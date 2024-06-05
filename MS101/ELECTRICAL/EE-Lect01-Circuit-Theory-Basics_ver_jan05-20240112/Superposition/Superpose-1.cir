@@ -1,0 +1,27 @@
+*Illustration of Principle of Superposition
+*Voltage source V1 is connected between nodes Src1 and ground (node 0).
+*Voltage source V2 is connected between nodes Src2 and ground (node 0).
+*To disable V1, comment the following line (by inserting a * at the beginning)
+*and uncomment the next line (by removing the *)
+V1 Src1 0 DC 9V
+*V1 Src1 0 DC 0V
+*To disable V2, comment the following line (by inserting a * at the beginning)
+*and uncomment the next line (by removing the *)
+*V2 Src2 0 DC 12V
+V2 Src2 0 DC 0V
+R1 Src1 A 1200
+RL A B 1200
+*ngspice evaluates currents through voltage sources. To find current through
+*other components, one puts a test source of 0V in series with them.
+*Now the current through this source is the current through the component.
+*Put a zero volt source in series with RL to measure current through it
+Vtest B 0 0
+R2 Src2 A 1200
+*Carry out operating point analysis
+.OP
+.control
+run
+print I(Vtest)
+.endc
+.end
+

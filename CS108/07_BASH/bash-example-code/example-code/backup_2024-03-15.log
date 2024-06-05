@@ -1,0 +1,22 @@
+sending incremental file list
+created directory backup/current
+demo/
+demo/anotherdir/
+demo/code/
+demo/code/hello
+demo/code/hello.c
+demo/doc/
+
+sent 215 bytes  received 75 bytes  580.00 bytes/sec
+total size is 16,055  speedup is 55.36 (DRY RUN)
+sending incremental file list
+created directory backup/current
+demo/
+demo/anotherdir/
+demo/code/
+demo/code/hello
+demo/code/hello.c
+demo/doc/
+
+sent 215 bytes  received 75 bytes  580.00 bytes/sec
+total size is 16,055  speedup is 55.36 (DRY RUN)
